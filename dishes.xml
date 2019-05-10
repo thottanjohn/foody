@@ -1,58 +1,46 @@
-<hoteldishes>
-   <hotel id="Hotel arya">
-        <dishes>
-            <item>
-                <name>Ghee rice </name>
-                <available>No </available>
-            </item>
-
-            <item>
-                <name>Paneer Butter Masala </name>
-                <available>No </available>
-            </item>
-
-            <item>
-                <name>Gobi Manjurian </name>
-                <available>No </available>
-            </item>
-
-            <item>
-                <name>Porotta </name>
-                <available>No </available>
-            </item>
-
-            <item>
-                <name>Masala Dosa </name>
-                <available>No </available>
-            </item>
-        </dishes>
-   </hotel>
-   <hotel id="Hotel cp">
-        <dishes>
-            <item>
-                <name name="gheerice">Ghee rice </name>
-                <available>No </available>
-            </item>
-
-            <item>
-                <name>Paneer Butter Masala </name>
-                <available>No </available>
-            </item>
-
-            <item>
-                <name>Gobi Manjurian </name>
-                <available>No </available>
-            </item>
-
-            <item>
-                <name>Porotta </name>
-                <available>No </available>
-            </item>
-
-            <item>
-                <name>Masala Dosa </name>
-                <available>No </available>
-            </item>
-        </dishes>
-   </hotel>
-</hoteldishes>
+<hotelinfo>
+    <hotel id="Hotel arya">
+        <item>
+            <name>Ghee rice </name>
+            <availability>No</availability>
+        </item>
+        <item>
+            <name>Paneer Butter Masala </name>
+            <availability>No</availability>
+        </item>
+        <item>
+            <name>Gobi Manjurian </name>
+            <availability>No</availability>
+        </item>
+        <item>
+            <name>Porotta </name>
+            <availability>No</availability>
+        </item>
+        <item>
+            <name>Masala Dosa </name>
+            <availability>No</availability>
+        </item>
+    </hotel>
+    <hotel id="Hotel cp">
+        <item>
+            <name>Ghee rice </name>
+            <availability>No </availability>
+        </item>
+        <item>
+            <name>Paneer Butter Masala </name>
+            <availability>No </availability>
+        </item>
+        <item>
+            <name>Gobi Manjurian </name>
+            <availability>No </availability>
+        </item>
+        <item>
+            <name>Porotta </name>
+            <availability>No </availability>
+        </item>
+        <item>
+            <name>Masala Dosa </name>
+            <availability>No </availability>
+        </item>
+    </hotel>
+</hotelinfo>
