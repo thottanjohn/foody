@@ -1,0 +1,15 @@
+<hotelinfo>
+        <hotel>
+            <name>Hotel arya</name>
+            <username>hotelarya</username>
+            <password>pass</password>
+            <location>Pallimoola</location>
+        </hotel>
+
+        <hotel>
+            <name>Sp</name>
+            <username>hotelsp</username>
+            <password>sp@123</password>
+            <location>Pallimoola</location>
+        </hotel>
+</hotelinfo>

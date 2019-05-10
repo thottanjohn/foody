@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>Foody</h1>
+        <p>search your favourite food!</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-success">
+      <div class="panel-heading" style="text-align: center;font-size: 2em;">Hotel Administration</div>
+      <div class="panel-body">
+
+                <div class="form-group">
+                                <label for="">Username</label>
+                                <input type="text" class="form-control" id="username" placeholder="username">
+                            </div>
+
+                            <div class="form-group">
+                                    <label for="">password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="password">
+                                </div>
+
+
+
+                            <button id="bt" class="btn btn-primary">&nbsp;Login&nbsp;</button>
+
+
+          <p id="demo" style="text-align: center;font-size: 2em;color: #f00;"></p>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+        $('#bt').click(function () {
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if(xhttp.readyState == 4 && xhttp.status == 200){
+
+                    parseXml(xhttp);
+
+                }
+            }
+            xhttp.open("GET", "login.xml", true);
+			xhttp.send();
+			function parseXml(response) {
+    				var xmlDoc = response.responseXML;
+    				var user = $('#username').val();
+    				var pass = $('#password').val();
+
+    				for(let name of xmlDoc.getElementsByTagName("hotel")){
+    				    var username = name.getElementsByTagName("username")[0].childNodes[0].nodeValue;
+    				    var password = name.getElementsByTagName("password")[0].childNodes[0].nodeValue;
+                        var name = name.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+
+    				    if(username == user && password == pass){
+    				        window.location.href = 'demo.php?name='+ name;
+    				        //console.log("found");
+                        }
+
+    				    else{
+    				        $('#demo').html("Invalid credentials");
+                        }
+                    }
+
+			}
+
+
+        });
+
+    </script>
+
+</body>
+</html>
