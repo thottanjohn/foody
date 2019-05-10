@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>Hotel | food</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -13,6 +13,36 @@
     </head>
 
     <body>
+            <div class="jumbotron text-center">
+                <h1>Foody</h1>
+                <p>search your favourite food!</p>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Dishes</th>
+                                    <th>Availability</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table_body">
+                                
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
 
     <script>
 
@@ -35,13 +65,24 @@
 
                             //getting hotelname from get request
                             var hotelname = "<?php echo $_GET['name']?>";
-
+                            
+                            //accessing the table body element
+                            var table_body = $("#table_body");
                             // checking the hotelname
                             if(name.getAttribute('id')==hotelname)
                             {
                                 for(let dishes of name.getElementsByTagName("name"))
                                 {
                                     console.log(dishes.childNodes[0].nodeValue);
+                                    //dynamically adding rows
+                                    var tr = $('<tr></tr>');
+                                    var td1 = $('<td>'+dishes.childNodes[0].nodeValue+'</td>');
+                                    var td2 = $('<td><div class="checkbox"><label><input type="checkbox" value=""></label></div></td>');
+                                    tr.append(td1);
+                                    tr.append(td2);
+                                    table_body.append(tr);
+                                    // var td =  $('<tr>'+name.getElementsByTagName("availabiliy"))
+
                                 }
                             }
                         
